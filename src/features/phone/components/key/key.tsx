@@ -17,13 +17,21 @@ export function Key() {
     <>
       {numberArray.map((number: string) => (
         <li>
-          <button className="key" key="key" onClick={() => addNumber(number)}>
+          <button
+            className="key"
+            key={number}
+            onClick={() => addNumber(number)}
+          >
             {number}
           </button>
         </li>
       ))}
       <li>
-        <button className="key big" onClick={() => deleteNumber()}>
+        <button
+          className="key big"
+          key={"delete"}
+          onClick={() => deleteNumber()}
+        >
           delete
         </button>
       </li>
