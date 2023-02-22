@@ -17,7 +17,11 @@ export function Key() {
     <>
       {numberArray.map((number: string) => (
         <li>
-          <button className="key" key="key" onClick={() => addNumber(number)}>
+          <button
+            className="key"
+            key={number}
+            onClick={() => addNumber(number)}
+          >
             {number}
           </button>
         </li>
