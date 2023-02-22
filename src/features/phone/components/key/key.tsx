@@ -27,7 +27,11 @@ export function Key() {
         </li>
       ))}
       <li>
-        <button className="key big" onClick={() => deleteNumber()}>
+        <button
+          className="key big"
+          key={"delete"}
+          onClick={() => deleteNumber()}
+        >
           delete
         </button>
       </li>

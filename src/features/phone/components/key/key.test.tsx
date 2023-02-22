@@ -4,13 +4,15 @@ import { store } from "../../../../core/store/store";
 import { Key } from "./key";
 
 describe("Given the Key component", () => {
+  beforeEach(() => {
+    render(
+      <Provider store={store}>
+        <Key></Key>
+      </Provider>
+    );
+  });
   describe("When it is rendered", () => {
     test("Then it should appear in the screen", () => {
-      render(
-        <Provider store={store}>
-          <Key></Key>
-        </Provider>
-      );
       const element = screen.getByText(/delete/);
       expect(element).toBeInTheDocument();
     });
