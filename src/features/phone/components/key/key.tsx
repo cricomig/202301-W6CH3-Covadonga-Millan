@@ -16,12 +16,8 @@ export function Key() {
   return (
     <>
       {numberArray.map((number: string) => (
-        <li>
-          <button
-            className="key"
-            key={number}
-            onClick={() => addNumber(number)}
-          >
+        <li key={number}>
+          <button className="key" onClick={() => addNumber(number)}>
             {number}
           </button>
         </li>
